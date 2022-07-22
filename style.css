@@ -1,0 +1,133 @@
+/* start of default resets */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap");
+
+:root {
+  --primary-color: #420039;
+  --secondary-color: #932f6d;
+  --text-background-color: #dcccff;
+  --background-color: #f6f2ff;
+  --transition: all 0.8s ease-in-out;
+  --box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.411);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.section-center {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.btn {
+  border: none;
+  font-weight: 800;
+  background-color: var(--primary-color);
+  color: white;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding: 0.8rem 2rem;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  transition: var(--transition);
+  letter-spacing: 2px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: whitesmoke;
+  transform: translateY(-0.1rem);
+}
+
+/* end of default resets */
+
+.heading {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  color: whitesmoke;
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+.accordion {
+  text-align: left;
+  width: 80vw;
+  margin: 0 auto;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  padding-left: 2rem;
+  background-color: var(--secondary-color);
+  color: honeydew;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion::after {
+  content: "\002B";
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  width: 80vw;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.8s ease-in-out;
+  height: 0;
+}
+.content p {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.content-active {
+  height: 25vh;
+  /* display: block; */
+}
+
+.active {
+  display: block;
+}
+.active::after {
+  content: "\002D";
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 800px) {
+  .accordion {
+    width: 50vw;
+  }
+  .content {
+    width: 50vw;
+  }
+}
